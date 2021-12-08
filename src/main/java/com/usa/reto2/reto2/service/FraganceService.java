@@ -47,6 +47,10 @@ public class FraganceService {
                 if (accesory.getDescription() != null) {
                     accesoryDb.get().setDescription(accesory.getDescription());
                 }
+
+                if (accesory.getPresentation() != null) {
+                    accesoryDb.get().setPresentation(accesory.getPresentation());
+                }
                 if (accesory.getPrice() != 0.0) {
                     accesoryDb.get().setPrice(accesory.getPrice());
                 }
@@ -66,7 +70,7 @@ public class FraganceService {
             return accesory;
         }
     }
-
+ // hola Mundo
     public boolean delete(String reference) {
         Boolean aBoolean = getFra(reference).map(accesory -> {
             fraRepository.delete(accesory);
